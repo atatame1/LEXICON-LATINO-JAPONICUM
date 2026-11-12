@@ -1,0 +1,179 @@
+/*@font-face {font-family:"Ten Mincho Text";src:url("Ten Mincho Text Regular.otf") format("opentype");}*/
+/*@font-face {font-family:"Source Han Serif JP";src:url("SourceHanSerifJP-Regular.otf") format("opentype");}*/
+/*@font-face {font-family:"Source Han Sans JP";src:url("SourceHanSansJP-Regular.otf") format("opentype");}*/
+
+body {
+	font-family: times new roman, "Source Han Sans JP", "Noto Sans CJK JP", "IPAexGothic", "Hiragino Kaku Gothic ProN", "Yu Gothic", "MS Gothic";
+	color: black;
+	line-height: 1.5em;
+	vertical-align: middle;
+	padding-left: 1rem;
+}
+
+.ex, .ex2, .cf/*, .jl*/ {
+	font-family: times new roman, "Ten Mincho Text", "Source Han Serif JP", "Noto Serif CJK JP", "IPAexMincho", "IPAmjMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho";
+}
+
+/*.ex2:before {
+	content:"▽";
+}
+
+.ext:before {
+	content:"∥";
+}*/
+
+.ext {
+	display: block;
+	color: black;
+}
+
+.ex2 .ext, .cf .ext {
+	color: #000093;
+}
+
+hr{
+	margin-top:2em;
+	border:0px solid grey;
+}
+
+.hw {
+	line-height: 2.5rem;
+	margin-left:-1rem;
+	margin-bottom: 0.5rem;
+	font-size: 1.5em;
+	font-weight: bold;
+	border-bottom: 2px solid #7d392a;
+}
+
+.hw2 {
+	line-height: 2.5rem;
+	margin-left:-1rem;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.pos, .pos2, .ori {
+	margin-left:-1rem;
+}
+
+author {
+	font-weight: bold;
+}
+
+img.font {
+	height: 1.5em;
+	vertical-align: -0.4em;
+}
+
+img.font[src*="A13A.png"], img.font[src*="A12A.png"], img.font[src*="A130.png"], img.font[src*="A13F.png"], img.font[src*="A142.png"] {
+	height: 1em;
+	vertical-align: -0.1em;
+}
+
+.ex, .ex2, .cf {
+	margin-left: 1em;
+	margin-right: 1em;
+	padding-left: 3em;
+	padding-right: 3em;
+	background: #ffffcc;
+	color: #000093;
+}
+
+.ex2 {
+	color: black;
+}
+
+.cf {
+	color: black;
+	background: #e9e9f9;
+}
+
+.ori {
+	background: #f2f2f2;
+}
+
+.pos3, .pos i, .pos2 i/*, .def i*/ {
+	color: green;
+}
+
+span.key {
+	font-weight: bold;
+	font-style: italic;
+}
+
+num0, num, num1, num2 {
+	color: #7d392a;
+}
+
+num0 {margin-left: -1em;}
+num2 {margin-left: -0.8em;}
+num {margin-left: 0em;}
+num1 {margin-left: 1em;}
+
+.mainTitle{
+	margin-left:-1rem;
+	font-weight: bold;
+	color: #000000;
+	border: solid;
+	border-width: 3px 0px 3px 0px;
+	padding: 5px;
+	border-color: #7d392a;
+}
+.contents_title {
+	font-weight: bold; 
+	padding: 3px;
+	background-color: #FFCCCC}
+.dic_title {
+	font-weight: bold;
+	}
+.dictsample_midashi {
+	font-weight: bold
+	}
+.letter_lower {font-size: 9px}
+.pronsample_midashi {
+	font-weight: bold
+	}
+.plain {font-weight: normal}
+.midashi_1 {
+	font-weight: bold; background-color: #CCCCCC
+	}
+.midashi_2 {
+	font-weight: bold; background-color: #CCFF99
+	}
+.midashi_3 {
+	font-weight: bold
+	}
+.midashi_tyuui {font-weight: bold; color: #990000}
+.midashi_kanren1 {font-weight: bold; color: #006633}
+.midashi_youhou1 {font-weight: bold; color: #006633}
+.caution {color: #990000}
+.transform {
+	text-indent:0;
+	display: inline-block;
+	-moz-transform:    rotate( 180deg );  /* Firefox */
+	-webkit-transform: rotate( 180deg );  /* Chrome,Safari */
+	-o-transform:      rotate( 180deg );  /* Opera */
+	-ms-transform:     rotate( 180deg );  /* IE */
+	transform:         rotate( 180deg );  /* CSS3 */
+}
+
+sup, sub {
+   vertical-align: baseline;
+   position: relative;
+   top: -0.4em;
+}
+sub { top: 0.4em; }
+
+a {
+	padding-bottom: 0.1em;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 414px) {
+	num1 {margin-left: 0.5em;}
+	.ex, .ex2, .cf {padding-left: 1em;padding-right: 1em;}
+}
+
+@media (prefers-color-scheme: dark) {
+	img {background-color:#ccc;}
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>羅和辞典 · 拉丁语—日语词典</title>
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/llj.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div id="boot">
+  <div class="boot-card">
+    <div class="boot-latin">LEXICON LATINO-JAPONICUM</div>
+    <div class="boot-title">羅和辞典</div>
+    <div class="boot-bar"><i></i></div>
+    <div class="boot-note">正在载入词典数据…</div>
+  </div>
+</div>
+
+<header id="topbar">
+  <div class="bar-inner">
+    <div class="brand">
+      <h1>羅和辞典</h1>
+      <span class="brand-sub">改訂版 · 研究社 2009</span>
+    </div>
+
+    <div class="searchbox">
+      <svg class="s-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <input id="q" type="search" placeholder="输入拉丁语词头，如 amo / amō / audio　（可省长音符）"
+             autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus>
+      <button id="clear" class="s-clear" title="清空" aria-label="清空">×</button>
+    </div>
+
+    <div class="tools">
+      <button class="tbtn" id="random" title="随机抽一条">随机</button>
+      <button class="tbtn" id="fs-down" title="缩小字号">A−</button>
+      <button class="tbtn" id="fs-up" title="放大字号">A＋</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <aside id="rail">
+    <div class="rail-head">
+      <span id="hitinfo">共 0 条</span>
+      <span class="rail-hint" id="modehint"></span>
+    </div>
+    <div class="alpha" id="alpha"></div>
+    <div class="rail-empty" id="railempty">
+      输入词头开始检索，或点上方字母浏览。
+      <span>长音符可省略：<code>amo</code> → <code>amō</code></span>
+    </div>
+    <ul id="hits" class="hits"></ul>
+  </aside>
+
+  <article id="pane">
+    <button id="back" class="back">← 返回列表</button>
+    <div id="welcome" class="welcome">
+      <div class="w-latin">LEXICON LATINO-JAPONICUM</div>
+      <h2>羅和辞典</h2>
+      <p class="w-sub">改訂版 · 水谷智洋 編 · 研究社 2009</p>
+      <div class="w-grid">
+        <div class="w-item">
+          <b>直接查词</b>
+          <span>输入拉丁语词头即可，联想即时出结果。长音符可以省略：<code>amo</code> 能找到 <code>amō</code>。</span>
+        </div>
+        <div class="w-item">
+          <b>和羅語彙集</b>
+          <span>词典附有日语→拉丁语索引，直接输入假名或汉字也能检索。</span>
+        </div>
+        <div class="w-item">
+          <b>释义内跳转</b>
+          <span>释义里带虚线的词是交叉引用，点击即可跳到对应词条。</span>
+        </div>
+        <div class="w-item">
+          <b>导读与附录</b>
+          <span>上方字母栏可快速浏览；附录（凡例・变化表・罗马历等）见下方入口。</span>
+        </div>
+      </div>
+      <div class="w-links" id="frontmatter"></div>
+      <p class="w-stat" id="wstat"></p>
+    </div>
+    <div id="entry-meta" class="entry-meta"></div>
+    <div id="entry" class="entry-body"></div>
+    <div id="placeholder" class="placeholder">
+      <span>从左侧选择一个词条</span>
+      <small>或按 ↑ ↓ 选择、Enter 打开</small>
+    </div>
+  </article>
+</main>
+
+<noscript><p style="padding:2rem">这个页面需要启用 JavaScript。</p></noscript>
+
+<script src="data/idx.js"></script>
+<script src="data/stats.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
